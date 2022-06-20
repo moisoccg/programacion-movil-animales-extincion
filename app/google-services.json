@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "158338730312",
+    "project_id": "animalesextintos-ae834",
+    "storage_bucket": "animalesextintos-ae834.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158338730312:android:025b9e6570de397a5c0b7d",
+        "android_client_info": {
+          "package_name": "com.proyecto.animalesextintos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158338730312-l169ubrs174aot3946o9nc5cai4q6hgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWULTKSMeG863NoIHoGtCb4F-SWXLe730"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158338730312-l169ubrs174aot3946o9nc5cai4q6hgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
