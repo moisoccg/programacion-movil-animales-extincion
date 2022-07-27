@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">AnimalesExtintos</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_signout">Cerrar Sesión</string>
+
+    <string name="menu_animal">Animales Extintos</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="latitud">Latitud</string>
+    <string name="longitud">Longitud</string>
+    <string name="altura">Altura</string>
+    <string name="msg_success">Se agregó exitosamente</string>
+    <string name="msg_error">Hubo un problema, por favor vuelva a intentar</string>
+    <string name="delete_success">Se eliminó</string>
+    <string name="safeToDelete">¿Está seguro que desea eliminar?</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="msg_nombre">Nombre del lugar</string>
+    <string name="msg_saludos">Hola!</string>
+    <string name="msg_correo">No se correo!</string>
+    <string name="menu_delete">Eliminar</string>
+    <string name="bt_update">Actualizar</string>
+    <string name="bt_add">Agregar</string>
 </resources>
