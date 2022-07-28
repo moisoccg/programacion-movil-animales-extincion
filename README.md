@@ -5,3 +5,4 @@ Proyecto del curso programación móvil, relacionado a la gestión de animales e
 
 # Integrantes
 * Moises Chaves
+* José Carlo Morales Morales
