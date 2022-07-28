@@ -1,9 +1,11 @@
 # programacion-movil-animales-extincion
 Proyecto del curso programación móvil, relacionado a la gestión de animales en peligro de extinción
 
-
-
-# Integrantes
+## Integrantes
 * Moises Chaves
 * José Carlo Morales Morales
 * Wilson Sanchez Guzman
+
+## Descripcion
+
+## Link Figma
