@@ -5,6 +5,7 @@ Proyecto del curso programación móvil, relacionado a la gestión de animales e
 * Moises Chaves
 * José Carlo Morales Morales
 * Wilson Sanchez Guzman
+* Carlomagno Gutiérrez Casasola
 
 ## Descripcion
 
