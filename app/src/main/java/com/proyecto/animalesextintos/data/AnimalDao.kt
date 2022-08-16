@@ -1,22 +1,101 @@
 package com.proyecto.animalesextintos.data
 
-import android.widget.RadioGroup
+import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.room.*
+import androidx.lifecycle.MutableLiveData
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreSettings
+import com.google.firebase.ktx.Firebase
 import com.proyecto.animalesextintos.model.Animal
 
-@Dao
-interface AnimalDao {
+class AnimalDao {
 
-    @Query("SELECT * FROM ANIMAL")
-    fun getAll(): LiveData<List<Animal>>
+    private var codigoUsuario: String
+    private var firestore: FirebaseFirestore
+    private var animalesapp = "AnimalesApp"
+    private var miColeccion = "misAnimales"
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun addAnimal(animal: Animal)
+init {
+    val usuario = Firebase.auth.currentUser?.email
+    codigoUsuario= "$usuario"
 
-    @Update(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun updateAnimal(animal: Animal)
+    firestore = FirebaseFirestore.getInstance()
+    firestore.firestoreSettings = FirebaseFirestoreSettings.Builder().build()
 
-    @Delete
-    suspend fun deleteAnimal(animal: Animal)
+}
+
+    fun getAll(): MutableLiveData<List<Animal>> {
+        val listaAnimales = MutableLiveData<List<Animal>>()
+
+        firestore.collection(animalesapp)
+            .document(codigoUsuario)
+            .collection(miColeccion)
+            .addSnapshotListener{snapshot, e->
+                if (e != null) {
+                    return@addSnapshotListener
+                }
+                if (snapshot != null) {
+                    val lista = ArrayList<Animal>()
+                    val Animales = snapshot.documents
+
+                    Animales.forEach{
+                       val animal = it.toObject(Animal::class.java)
+                        if (animal != null){
+                            lista.add(animal)
+                        }
+                    }
+                    listaAnimales.value = lista
+                }
+            }
+        return  listaAnimales
+    }
+
+    fun addAnimal(animal: Animal) {
+        var document: DocumentReference
+        if (animal.id.isEmpty()) {
+            document = firestore
+                .collection(animalesapp)
+                .document(codigoUsuario)
+                .collection(miColeccion)
+                .document()
+            animal.id = document.id
+        }else{
+            document = firestore
+                .collection(animalesapp)
+                .document(codigoUsuario)
+                .collection(miColeccion)
+                .document(animal.id)
+        }
+        val set = document.set(animal)
+        set.addOnSuccessListener {
+            Log.d("AddLugar", "Lugar Agregado" + animal.id)
+        }
+            .addOnCanceledListener {
+                Log.d("AddLugar", "Lugar NO Agregado" + animal.id)
+            }
+    }
+
+     fun updateAnimal(animal: Animal){
+         addAnimal(animal)
+
+     }
+
+     fun deleteAnimal(animal: Animal){
+         if (animal.id.isNotEmpty()){
+             firestore
+                 .collection(animalesapp)
+                 .document(codigoUsuario)
+                 .collection(miColeccion)
+                 .document(animal.id)
+                 .delete()
+                 .addOnSuccessListener {
+                 Log.d("deleteAnimal", "Lugar eliminado" + animal.id)
+             }
+                 .addOnCanceledListener {
+                     Log.d("deleteAnimal", "Lugar NO eliminado" + animal.id)
+                 }
+         }
+     }
 }

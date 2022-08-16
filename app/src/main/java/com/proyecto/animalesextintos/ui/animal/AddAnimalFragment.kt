@@ -39,10 +39,9 @@ class AddAnimalFragment : Fragment() {
 
         if(validation(nombre)){
             //guardar animal
-            val animal = Animal(0,nombre)
+            val animal = Animal("",nombre)
             animalViewModel.addAnimal(animal) //enviando a la bd
             Toast.makeText(requireContext(), getString(R.string.msg_success), Toast.LENGTH_LONG).show()
-
             findNavController().navigate(R.id.action_addAnimalFragment_to_nav_animal) //devolver al producto desde la lista
 
         } else{

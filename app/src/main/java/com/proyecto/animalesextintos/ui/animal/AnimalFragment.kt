@@ -4,17 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proyecto.animalesextintos.R
 import com.proyecto.animalesextintos.adapter.AnimalAdapter
-import com.proyecto.animalesextintos.databinding.FragmentAddAnimalBinding
 import com.proyecto.animalesextintos.databinding.FragmentAnimalBinding
-import com.proyecto.animalesextintos.model.Animal
 import com.proyecto.animalesextintos.viewmodel.AnimalViewModel
 
 
