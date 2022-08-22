@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:backgroundTint="@color/black"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/black"
     tools:context=".MainActivity">
 
     <EditText
@@ -45,13 +45,13 @@
         android:layout_marginTop="22dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="495dp"
+        android:background="@drawable/button_states"
         android:text="Login"
         app:icon="@drawable/ic_login_dark_mode"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword4"
-       android:background="@drawable/button_states"
 
         />
 
@@ -62,12 +62,48 @@
         android:layout_marginTop="54dp"
         android:layout_marginEnd="65dp"
         android:layout_marginBottom="480dp"
+        android:background="@drawable/button_states"
         android:text="Register"
         app:icon="@drawable/ic_register_dark_mode"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/login"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword4"
-        android:background="@drawable/button_states"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword4" />
+
+    <LinearLayout
+        android:id="@+id/layout_forgot_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register"
+        android:layout_marginBottom="731dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_forgot_password"
+        android:layout_width="332dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="403dp"
+        android:background="@null"
+        android:text="Forgot your password?"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
