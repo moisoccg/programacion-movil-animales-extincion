@@ -43,10 +43,13 @@ class AddAnimalFragment : Fragment() {
 
     private fun addLuggar(){
         val nombre = binding.animalName.text.toString()
+        val tipo = binding.animalType.text.toString()
+        val lugar = binding.animalPlace.text.toString()
+        val raza = binding.animalRace.text.toString()
 
         if(validation(nombre)){
             //guardar animal
-            val animal = Animal("",nombre)
+            val animal = Animal("",nombre,raza,tipo,lugar)
             animalViewModel.addAnimal(animal) //enviando a la bd
             Toast.makeText(requireContext(), getString(R.string.msg_success), Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_addAnimalFragment_to_nav_animal) //devolver al producto desde la lista
