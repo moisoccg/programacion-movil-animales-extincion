@@ -17,9 +17,9 @@ app:cardElevation="30dp">
         android:id="@+id/animalName"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/secondaryLightColor"
         android:gravity="center"
         android:text="TextView"
-        android:textColor="@color/primaryDarkColor"
-        />
+        android:textColor="@color/secondaryTextColor" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

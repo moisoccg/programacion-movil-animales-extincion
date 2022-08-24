@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_signout"
+        android:icon="@drawable/ic_login_dark_mode"
         android:orderInCategory="100"
         android:title="@string/action_signout"
         app:showAsAction="never" />
