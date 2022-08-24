@@ -70,10 +70,10 @@ init {
         }
         val set = document.set(animal)
         set.addOnSuccessListener {
-            Log.d("AddLugar", "Lugar Agregado" + animal.id)
+            Log.d("AddAnimal", "Animal Agregado" + animal.id)
         }
             .addOnCanceledListener {
-                Log.d("AddLugar", "Lugar NO Agregado" + animal.id)
+                Log.d("AddAnimal", "Animal NO Agregado" + animal.id)
             }
     }
 
@@ -91,10 +91,10 @@ init {
                  .document(animal.id)
                  .delete()
                  .addOnSuccessListener {
-                 Log.d("deleteAnimal", "Lugar eliminado" + animal.id)
+                 Log.d("deleteAnimal", "Animal eliminado" + animal.id)
              }
                  .addOnCanceledListener {
-                     Log.d("deleteAnimal", "Lugar NO eliminado" + animal.id)
+                     Log.d("deleteAnimal", "Animal NO eliminado" + animal.id)
                  }
          }
      }

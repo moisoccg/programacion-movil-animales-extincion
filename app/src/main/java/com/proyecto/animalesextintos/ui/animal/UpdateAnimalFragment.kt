@@ -82,10 +82,13 @@ class UpdateAnimalFragment : Fragment() {
 
     private fun updateAnimal(){
         val nombre = binding.animalName.text.toString()
+        val tipo = binding.animalType.text.toString()
+        val lugar = binding.animalPlace.text.toString()
+        val raza = binding.animalRace.text.toString()
 
         if(validation(nombre)){
             //guardar animal
-            val animal = Animal(args.animal.id,nombre)
+            val animal = Animal(args.animal.id,nombre,raza,tipo,lugar)
             animalViewModel.updateAnimal(animal) //enviando a la bd
             Toast.makeText(requireContext(), getString(R.string.msg_success), Toast.LENGTH_LONG).show()
 
