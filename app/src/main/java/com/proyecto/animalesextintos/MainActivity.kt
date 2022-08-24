@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnForgotPassword.setOnClickListener {
             startActivity(Intent(applicationContext, ResetPasswordActivity::class.java))
         }
+
+
     }
 
 
