@@ -97,7 +97,7 @@
         android:background="@drawable/button_states"
         android:text="Forgot your password?"
         android:textAllCaps="false"
-        android:textColor="@color/primaryDarkColor"
+        android:textColor="@color/secondaryTextColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
